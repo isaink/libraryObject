@@ -29,9 +29,9 @@
 			function listBooks () {
 				for (var i = 0; i < bookLibrary.length; i++){
 					if (bookLibrary[i].readingStatus == true){
-						document.getElementById("books").innerHTML += "<li style='color:blue'>" + "Already read " + bookLibrary[i].title + "by " + bookLibrary.author + "</li>";
+						document.getElementById("books").innerHTML += "<li style='color:blue'>" + "Already read " + bookLibrary[i].title + " by " + bookLibrary[i].author + "</li>";
 					}else{
-						document.getElementById("books").innerHTML += "<li style='color:red'>" + "You still need to read " + bookLibrary[i].title + "by" + bookLibrary[i].author + "</li>"
+						document.getElementById("books").innerHTML += "<li style='color:red'>" + "You still need to read " + bookLibrary[i].title + " by " + bookLibrary[i].author + "</li>"
 					}
 				}
 			}
