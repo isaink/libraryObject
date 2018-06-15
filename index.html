@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Library Objects</title>
+	</head>
+
+	<style type="text/css">
+		#title {
+			text-align: center;
+		}
+
+	</style>
+
+	<body>
+		<h1 id="title">Books</h1>
+		<ul id="books"></ul>
+
+		<script>
+			
+			var bookLibrary = [
+			{ author: 'Bill Gates', title: 'The Road Ahead', readingStatus: true },
+
+			{ author: 'Steve Jobs', title: 'Walter Isaacson', readingStatus: true },
+
+			{ author: 'Suzanne Collins', title:  'Mockingjay: The Final Book of The Hunger Games', readingStatus: false }
+
+			];
+
+			function listBooks () {
+				for (var i = 0; i < bookLibrary.length; i++){
+					if (bookLibrary[i].readingStatus == true){
+						document.getElementById("books").innerHTML += "<li style='color:blue'>" + "Already read " + bookLibrary[i].title + "by " + bookLibrary.author + "</li>";
+					}else{
+						document.getElementById("books").innerHTML += "<li style='color:red'>" + "You still need to read " + bookLibrary[i].title + "by" + bookLibrary[i].author + "</li>"
+					}
+				}
+			}
+			listBooks();
+		</script>
+	</body>
+</html>
